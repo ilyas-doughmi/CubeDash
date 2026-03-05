@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
-    public float speed = 6f;
+    public float speed = 8f	;
     public float jumpForce = 12f;
 
     private Rigidbody2D rb;
@@ -15,9 +15,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     void Update()
     {
-        // Move left/right
-        float move = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(1 * speed, rb.linearVelocity.y);
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
